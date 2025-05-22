@@ -16,7 +16,7 @@ app.listen(PORT, ()=>{
 
 app.get("/blogs",async (req,res)=>{
 
-    const blogs = db.prepare("SELECT * FROM blogs").run();
+    const blogs = db.prepare("SELECT * FROM blogs").get();
 
     res.send(blogs);
 });
