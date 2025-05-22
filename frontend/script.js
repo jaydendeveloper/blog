@@ -28,9 +28,6 @@ async function getBlogs(){
     return blogs;
 }
 
-getBlogs();
-
-
 async function editBlog(id){
     console.log("Edit blog");
 }
