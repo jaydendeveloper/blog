@@ -60,9 +60,9 @@ button:hover{
 .blog{
     padding: 20px;
     border: 1px solid black;
-    border-radius: 20px;
     margin-bottom: 20px;
-    background-color: white;
+    color: white;
+    background-color: #152b32;
 }
 
 .card-footer{
@@ -70,6 +70,11 @@ button:hover{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+.title-container > h1{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
 }
 
 h1{

@@ -38,8 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
             blogAuthor.textContent = "By: " + data.author;
             blogContent.textContent = data.content;
             blogCategory.textContent = "Kategória: " + data.category;
-            blogPublished.textContent = "Közzétéve: " + new Date(data.createdAt).toLocaleDateString("hu-HU", dateOptions);
+            blogPublished.textContent = new Date(data.createdAt).toLocaleDateString("hu-HU", dateOptions);
             blogChanged.textContent = "Frissítve: " + new Date(data.changedAt).toLocaleDateString("hu-HU", dateOptions);
+            document.title = "Volánbusz | " + data.title;
+
         })
         .catch(error => {
             console.error("Error fetching blog data:", error);
