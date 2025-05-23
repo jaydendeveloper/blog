@@ -16,7 +16,40 @@ app.listen(PORT, ()=>{
 
 app.get("/blogs",async (req,res)=>{
 
-    const blogs = db.prepare("SELECT * FROM blogs").get();
+    const blogs = db.prepare("SELECT * FROM blogs").all();
 
-    res.send(blogs);
+    console.log(blogs);
+
+    res.send(blogs || []);
 });
+
+app.get("/blogs/:id", async (req,res)=>{
+    const {id} = req.params;
+
+    const blog = db.prepare("SELECT * FROM blogs WHERE id = ?").get(id);
+
+    if(!blog){
+        return res.status(404).json({error: "Blog not found"});
+    }
+
+    res.send(blog);
+});
+
+app.post("/blogs", async (req,res)=>{
+    const {title, author, category, content} = req.body;
+    
+
+    if(!title || !author || !category || !content){
+        return res.status(400).json({error: "Missing required fields"});
+    }
+    const date = new Date()
+
+    db.prepare("INSERT INTO blogs (title, author, category, content, createdAt, changedAt) VALUES (?, ?, ?, ?, ?, ?)").run(
+        title,
+        author,
+        category,
+        content,
+        date.toISOString(),
+        date.toISOString()
+    );
+})

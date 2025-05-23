@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Új blog</title>
+</head>
+<body>
+    <nav>
+        <a href="/frontend/"><img src="/public/logo.png" alt=""></a>
+        <div>
+            <a href="/frontend/">Főoldal</h1></a>
+        </div>
+        <div>
+            <a href="/frontend/create/"><button>Új blog</button></a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="blog-creation">
+            <h1>Blog készítése</h1>
+            <form class="form create-form">
+                <input name="title" type="text" placeholder="Cím"/>
+                <input name="author" type="text" placeholder="Szerző"/>
+                <input name="category" type="text" placeholder="Kategória"/>
+                <textarea name="content" placeholder="Tartalom"></textarea>
+                <button id="new-blog-button" type="submit">Új blog elkészítése</button>
+            </form>
+        </div>
+    </div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
