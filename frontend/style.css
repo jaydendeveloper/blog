@@ -1,88 +1,84 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+	padding: 0;
+	margin: 0;
 }
 
-h1, div, a{
-    color: #152b32;
+h1,
+div,
+a {
+	color: #152b32;
 }
 
-body{
-    background-color: white;
-    font-family: sans-serif;
+body {
+	background-color: white;
+	font-family: sans-serif;
 }
 
-.container{
-    width: 70%;
-    background-color: white;
-    margin: 0 auto;
-    min-height: 100vh;
-    padding: 20px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+.container {
+	width: 70%;
+	background-color: white;
+	margin: 0 auto;
+	min-height: 100vh;
+	padding: 20px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+.title-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	border-bottom: 2px solid black;
+}
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #f8ac04;
+	width: 98%;
 }
 
-.blog-creation{
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 20px;
+button {
+	padding: 10px;
+	background-color: #f8ac04;
+	color: #152b32;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	font-weight: 600;
+	text-transform: uppercase;
 }
-.title-container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    border-bottom: 2px solid black;
+button:hover {
+	opacity: 0.8;
 }
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #f8ac04;
-    width: 98%;
-}
-
-button{
-    padding: 10px;
-    background-color: #f8ac04;
-    color: #152b32;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-button:hover{
-    opacity: 0.8;
-}
-.blog{
-    padding: 20px;
-    border: 1px solid black;
-    margin-bottom: 20px;
-    color: white;
-    background-color: #152b32;
+.blog {
+	padding: 20px;
+	border: 1px solid black;
+	margin-bottom: 20px;
+	color: white;
+	background-color: #152b32;
 }
 
-.card-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+.card-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
 }
-.title-container > h1{
-    font-size: 2rem;
-    font-weight: 600;
-    color: white;
-}
-
-h1{
-    padding: 10px;
+.title-container > h1 {
+	font-size: 2rem;
+	font-weight: 600;
+	color: white;
 }
 
-a{
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
+h1 {
+	padding: 10px;
+}
+
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
 }
